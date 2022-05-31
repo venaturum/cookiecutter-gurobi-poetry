@@ -1,0 +1,23 @@
+repos:
+{%- if (cookiecutter.use_isort == "y") %}
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        {%- if (cookiecutter.use_black == "y") and (cookiecutter.use_isort == "y")%}
+        args: ["--profile", "black", "--filter-files"]
+        {%- endif %}
+        name: isort
+{%- endif %}
+{%- if (cookiecutter.use_black == "y") %}
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+{%- endif %}
+{%- if (cookiecutter.use_flake8 == "y") %}
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
+    -   id: flake8
+{%- endif %}

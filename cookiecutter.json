@@ -1,0 +1,31 @@
+{
+    "full_name": "George B. Dantzig",
+    "email": "optimality@extreme.point",
+    "project_name": "My Gurobi project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "short_description": "My organised, modern, reproducible optimisation project.",
+    "version": "0.1.0",
+    "command_line_interface": [
+        "none",
+        "argparse"
+    ],
+    "open_source_license": [
+        "MIT license",
+        "Apache Software License 2.0",
+        "GNU General Public License v3.0",
+        "GNU General Public License v2.0",
+        "BSD 3-Clause 'New' or 'Revised' License",
+        "GNU Lesser General Public License v2.1",
+        "BSD 2-Clause 'Simplified' License",
+        "Not open source"
+    ],
+    "use_gurobipy_exceptions": "y",
+    "use_notebooks": "n",
+    "use_pandas": "n",
+    "use_matplotlib": "n",
+    "use_seaborn": "n",
+    "use_isort": "y",
+    "use_black": "y",
+    "use_flake8": "y",
+    "use_precommit": "y"
+}

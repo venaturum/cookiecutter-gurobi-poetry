@@ -1,7 +1,10 @@
 from abc import ABC
 
 import gurobipy as gp
+{%- if cookiecutter.use_gurobipy_exceptions == "y" %}
 import gurobipy_exceptions as gp_exc
+{%- endif %}
+
 
 class GurobiBaseModel(ABC):
 
@@ -49,6 +52,8 @@ class GurobiBaseModel(ABC):
             pass
         #return callback
 
+{% if cookiecutter.use_gurobipy_exceptions == "y" %}
     @gp_exc.patch_error_message
+{%- endif %}
     def optimize(self):
         self._m.optimize(self._generate_root_sol_callback())

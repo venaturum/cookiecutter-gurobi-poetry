@@ -36,11 +36,11 @@ The template is intended to be used with object-oriented programming, which prov
 ### Dependencies
 
 This template project has one required Python dependency: `gurobipy`.
-If you wish to use the "matrixapi" functionality of `gurobipy` then `numpy` and `scipy` will also be required, but Cookiecutter will take care of this for you. The optional dependencies include:
+If you wish to use the "*matrixapi*" functionality of `gurobipy` then `numpy` and `scipy` will also be required, but Cookiecutter will take care of this for you. The optional dependencies include:
 
 [**gurobipy_exceptions**](https://github.com/venaturum/gurobipy_exceptions): a package available on github for patching and extending functionality related to exceptions in `gurobipy`
 
-[**numpy**](numpy.org/): a library providing support for multi-dimensional arrays and matrices, and related functionality.
+[**numpy**](https://numpy.org/): a library providing support for multi-dimensional arrays and matrices, and related functionality.
 
 [**scipy**](https://scipy.org/): a library with many modules for scientific and technical computing, including optimisation and linear algebra.
 

@@ -80,7 +80,7 @@ Another nice feature of Poetry, by default, is that the project will be installe
 
 Thinking of the project as a package may be a leap for newcomers, but it provides several advantages, especially when it comes to importing modules that have been developed in other directories.  With respect to a project generated with this template, developers can use `from myproj.models.base import GurobiBaseModel`, for example (assuming the project slug is *myproj*), from anywhere in the code and from any directory in the shell provided the Python executable used is the one local to the virtual environment created by Poetry.
 
-Another advantage of the project being installed as a package is discussed in the next section (`root directory reference`).
+Another advantage of the project being installed as a package is discussed in the next section (*root directory reference*).
 
 ### Root directory reference
 
@@ -114,8 +114,7 @@ The nature of modelling often means several alternative models arise which share
 ### The resulting directory structure
 ------------
 
-The directory structure of your new project is created through a combination of the files and folders which can be seen in this repository, and the use of a *hook* (*hooks/post_gen_project.py*) to add and remove directories.
-The resulting structure will be a subset (depending on options chosen during Cookiecutter prompt) of the following: 
+The directory structure of your new project is created through a combination of the files and folders which can be seen in this repository, and the use of a "hook" (*hooks/post_gen_project.py*) which is run as the final step in the setup to add and remove directories.  The resulting structure will be a subset (depending on options chosen during Cookiecutter prompt) of the following: 
 
 ```
 <project_slug>/

@@ -41,3 +41,4 @@ if __name__ == "__main__":
     if "{{ cookiecutter.use_notebooks }}" == "y":
         add("notebooks")
     add("problem_files")
+    add("scripts")

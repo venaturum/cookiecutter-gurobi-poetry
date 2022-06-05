@@ -20,11 +20,19 @@ keywords = ["python", "gurobi", "{{ cookiecutter.project_slug }}"]
 
 [tool.poetry.dependencies]
 python = ">=3.8, <3.11"
+{%- if cookiecutter.use_matrix_api == "y" %}
+gurobipy = {extras = ["matrixapi"], version="^9.5.1"}
+{%- else %}
 gurobipy = "^9.5.1"
-numpy = "^1"
-scipy = "^1"
+{%- endif %}
 {%- if cookiecutter.use_gurobipy_exceptions == "y" %}
 gurobipy_exceptions = {git = "https://github.com/venaturum/gurobipy_exceptions.git", rev = "main"}
+{%- endif %}
+{%- if cookiecutter.use_numpy == "y" %}
+numpy = "^1"
+{%- endif %}
+{%- if cookiecutter.use_scipy == "y" %}
+scipy = "^1"
 {%- endif %}
 {%- if cookiecutter.use_pandas == "y" %}
 pandas = "^1"

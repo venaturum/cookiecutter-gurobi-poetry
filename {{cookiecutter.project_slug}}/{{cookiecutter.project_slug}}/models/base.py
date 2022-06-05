@@ -60,11 +60,11 @@ class GurobiBaseModel(ABC):
 
     @classmethod
     def run(cls, *args, name=None, **kwargs):
-        instance = cls(*args, name, **kwargs)
+        instance = cls(*args, name=name, **kwargs)
         return instance
 
     @classmethod
     def make_model(cls, *args, name=None, **kwargs):
-        return cls(*args, name, **kwargs).model
+        return cls(*args, name=name, **kwargs).model
 
 

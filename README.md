@@ -7,8 +7,8 @@ _An "opinionated" Cookiecutter for creating optimisation projects in Python with
 ## Requirements:
 -----------
  - Python 3.8+
- - Gurobi solver, with valid license
- - [Cookiecutter]((http://cookiecutter.readthedocs.org/en/latest/installation.html))
+ - [Gurobi Optimizer](https://www.gurobi.com/products/gurobi-optimizer/), with valid license
+ - [Cookiecutter](http://cookiecutter.readthedocs.org/en/latest/installation.html)
  - [Poetry](https://python-poetry.org/docs/#installation)
 
 ## Quickstart
@@ -129,7 +129,7 @@ The resulting structure will be a subset (depending on options chosen during Coo
 │       ├── __init__.py         <- Makes "models" a Python module
 │       └── base.py             <- Contains a base class, from which to extend
 │
-├── logs/                       <- A folder for log files produced by Gurobi solver
+├── logs/                       <- A folder for log files produced by Gurobi Optimizer
 │
 ├── model_files/                <- A place for your model files (.lp .mps etc)
 │

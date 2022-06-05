@@ -57,3 +57,14 @@ class GurobiBaseModel(ABC):
 {%- endif %}
     def optimize(self):
         self._m.optimize(self._generate_root_sol_callback())
+
+    @classmethod
+    def run(cls, *args, name=None, **kwargs):
+        instance = cls(*args, name, **kwargs)
+        return instance
+
+    @classmethod
+    def make_model(cls, *args, name=None, **kwargs):
+        return cls(*args, name, **kwargs).model
+
+
